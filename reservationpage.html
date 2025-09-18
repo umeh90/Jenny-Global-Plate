@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>reservation</title>
+	<style>
+		.naving{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+		.naving a.active{
+			color: #ffd700;
+		}
+		nav{
+			background-color: #333333;
+		}
+		li{
+			float: left;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+		}
+		li a:hover{
+			background-color: #111111;
+		}
+		body{
+			background-color: dimgrey;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		.contact-form{
+			max-width: 70%;
+			margin: 70px 0 20px  0;
+			padding: 20px;
+			background-color: mintcream;
+			border: 1px solid black;
+			
+		}
+		.contact-form label{
+			display: block;
+			margin-bottom: 10px;
+			color: black;
+			font-size: 25px;
+		}
+		.contact-form input, .contact-form textarea, .contact-form select{
+			width: 100%;
+			padding: 9px;
+			margin-bottom: 20px;
+			border: 1px solid black;
+
+		}
+		.contact-form [type=submit]{
+			color: black;
+			background-color: lightblue;
+			padding: 10px 20px;
+			border-radius: 5px;
+			width: 100px;
+			cursor: pointer;
+		}
+		.contact-form [type=submit]:hover{
+			background-color: darkblue;
+		}
+		.faq-accordion{
+			width: 100%;
+		}
+		.faq-question input[type="checkbox"]{
+			display: none;
+		}
+		
+		.faq-question label{
+			display: block;
+			padding: 10px;
+			background-color: mintcream;
+			border: 1px solid black;
+			cursor: pointer;
+			font-size: 25px;
+		}
+		.faq-answer{
+			display: none;
+			font-size: 25px;
+			color: mintcream;
+		} 	
+		.faq-question input:checked + label+.faq-answer{
+			display: block;
+		}
+		#imaging1{
+			margin: 50px auto 0 auto; 
+			display: block; 
+			width: 70%; 
+			height: 600px;
+			object-fit: cover;
+		}
+		#texting2{
+			color: mintcream;
+			 font-size: 80px; 
+			 text-align: center;
+			  text-shadow: 0px 0px 10px mistyrose;
+		}
+		#texting3{
+			color: mintcream;
+			font-size: 80px; 
+			font-weight: bold; 
+			text-align: center;
+		}
+		#text4{
+			color: mintcream; 
+			font-size: 80px; 
+			font-weight: bold;
+		}
+		#text5{
+			color: mintcream;
+			 font-size: 80px; 
+			 text-align: center; 
+			 text-decoration: underline;
+		}
+		@media screen and (max-width:768px){
+			li a{
+			padding: 10px;
+		}
+		#texting2{
+			font-size: 60px;
+		}
+		#imaging1{
+			width: 80%;
+			height: 500px;
+		}
+		#texting3{
+			font-size: 60px;
+		}
+		.contact-form{
+			max-width: 80%;
+		}
+		#text4{
+			font-size: 60px;
+		}
+		.faq-question label{
+			font-size: 20px;
+		}
+		.faq-answer{
+			font-size: 20px;
+		} 
+		.contact-form label{
+			font-size: 20px;
+		}	
+		#text5{
+			font-size: 60px;
+		}
+	}
+		@media screen and (max-width:375px){
+
+		.naving{
+			display: flex;
+			flex-direction: column;
+			height: 0;
+			overflow: hidden;
+
+		}
+		.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+		}
+		.naving.open{
+			height: auto;
+
+		}
+		#texting2{
+			font-size: 40px;
+		}
+		#imaging1{
+			width: 90%;
+			height: 400px;
+		}
+		#texting3{
+			font-size: 40px;
+		}
+		.contact-form{
+			max-width: 100%;
+			margin: 50px 0 20px  0;
+			padding: 10px;
+		}
+		.contact-form label{
+			margin-bottom: 7px;
+			font-size: 20px;
+		}
+		.contact-form input, .contact-form textarea, .contact-form select{
+			width: 100%;
+			padding: 2px;
+			margin-bottom: 10px;
+
+		}
+		.contact-form [type=submit]{
+			padding: 7px 7px;
+		}
+		.faq-question label{
+			font-size: 20px;
+		}
+		.faq-answer{
+			font-size: 20px;
+		} 
+		.faq-question label{
+			font-size: 17px;
+		}
+		.faq-answer{
+			font-size: 17px;
+		} 
+		#text5{
+			font-size: 40px;
+		}
+		
+		}
+		
+	</style> 
+</head>
+<body>
+	<nav>
+		<div class="hamburger"></div>
+		<ul class="naving">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="menupage.html">Menu</a></li>
+		<li><a href="contactpage.html">Contact</a></li>
+		<li><a href="reservationpage.html" class="active">Events & Reservation</a></li>
+	</ul>
+</nav>
+	<p id="texting2">JENNY GLOBAL PLATE</p>
+	<img src="images/finedining.jpg" alt="fine dining area" id="imaging1">
+	<hr>
+	<p id="texting3">MAKE YOUR RESERVATIONS!</p>
+	<hr>
+	<form class="contact-form">
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"> <br><br>
+		<label for="email"> Email:</label>
+		<input type="email" id="email" name="email"> <br><br>
+		<label for="phone"> Phone Number:</label>
+		<input type="Number" id="phone" name="phone"> <br><br>
+		<label for="message"> Date/Time of Reservation:</label>
+		<input type="text" id="message" name="message">
+		<label for="Number">Number of Guest:</label>
+		<select id="Number" name="guests">
+			<option value="1">1-10</option>
+			<option value="2">10-20</option>
+			<option value="3">20-30</option>
+			<option value="4">30-40</option>
+			<option value="5">40-50</option>
+			<option value="6">50-60</option>
+			<option value="7">60-70</option>
+			<option value="8">70-80</option>
+			<option value="9">80-90</option>
+			<option value="10">90-100</option>
+			
+		</select>
+	
+		<label for="message">Special Message Request:</label>
+		<textarea id="Message" name="Message"></textarea> <br><br>
+		<input type="submit" value="RESERVE">
+	</form>
+	<p id="text4">FAQs:</p>
+	<div class="faq-accordion">
+		<div class="faq-question">
+		<input type="checkbox" id="question1"> <label for="question1">Q:What is the Reservation policy?</label> <div class="faq-answer"> <p>Reservations can be made online or by phone 30 days in advanced </p></div>
+	</div>
+	
+		<div class="faq-question">
+		<input type="checkbox" id="question2"> <label for="question2">Q:Is there a limit to the number of guest?</label> <div class="faq-answer"> <p>Yes, the maximum number of guest one could have is 100. it cannot exceed 100 persons at a time.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question3"> <label for="question3">Q:Can i cancel or remodify my reservation?</label> <div class="faq-answer"> <p>Yes, please contact us at least 2 hours before the time.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question4"> <label for="question4">Q:Do you accomodate special request?</label> <div class="faq-answer"> <p>Yes, As an esteemed restaurant that always looks towards providing full satisfaction of our wonderful customers, please notify us any special request or dietary restrictions when making your reservation.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question5"> <label for="question5">Q:What is the dress code?</label> <div class="faq-answer"> <p>There is no dress code, customers are allowed to put on whatever suits their event and taste.</p></div>
+	</div>
+	<div class="faq-question">
+		<input type="checkbox" id="question6"> <label for="question6">Q:Do you offer takeout or delivery?</label> <div class="faq-answer"> <p>Yes, including dine in services.</p></div>
+	</div>
+</div>
+<p id="text5">Experience the perfect blend of flavours and atmosphere. we look forward to serving you soon! </p>
+<script type="text/javascript">
+	const getting = document.querySelector('.hamburger');
+	const display = document.querySelector('.naving');
+	getting.addEventListener('click', ()=>{
+		display.classList.toggle('open')
+	});
+</script>
+
+</body>
+</html>

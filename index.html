@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>trial</title>
+	<style>
+		body{
+			background-image: url(images/des11.jpg);
+			background-attachment: fixed;
+			font-size: 16px;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	
+
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.rectangle{
+			display: flex;
+			max-width: 100%;
+			height: 650px;
+			margin: 20px;
+		}
+		.image-part{
+			width: 50%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.image-part img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.text-part{
+			width: 50%;
+			height: 100%;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+		
+		.text-part h2{
+			font-size: 90px;
+			margin-bottom: 10px;
+			color: whitesmoke;
+			}
+		
+		.text-part p{
+			font-size: 40px;
+			color: whitesmoke;
+
+		}
+
+		 .naving{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+		.naving li{
+			float: left;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+		}
+
+		li a:hover{
+			background-color: #111111;
+		}
+		.naving a.active{
+			color: #ffd700;
+		}
+		
+		table{
+			border-collapse: collapse;
+			width: 100%;
+		}
+		td{
+			border: 1px solid white;
+			padding: 10px;
+			text-align: left;
+			color: white;
+			font-size: 20px;
+			
+		}
+		th{
+			color: white;
+			font-size: 30px;
+		}
+		#logoing{
+			display: flex;
+			align-items: left;
+		}
+		#imaging1{
+			width: 100px;
+			 height:70px;
+		}
+		#texting{
+			font-size: 50px; 
+			font-weight: bold;
+			 margin-left: 20px; 
+			 color: white;
+		}
+		#text2{
+			color: white;
+			font-size: 30px;
+		}
+		#text3{
+			 font-weight: bold; 
+			 font-size: 100px; 
+			 margin-top: -50px;"
+		}
+		#text4{
+			margin-top: -10px;
+		}
+		
+		nav{
+			background-color: #333333;
+		}
+		@media screen and (max-width:768px){
+
+	    li a{
+			padding: 10px;
+		}
+		#imaging1{
+			width: 60px;
+			height: 60px;
+			padding-top: 5px;
+		}
+		#texting{
+			font-size: 35px;
+			padding-top: 15px;
+		}
+	  	.rectangle{
+			height: 400px;
+			margin: 20px 0 20px 0;
+		}
+		.text-part{
+			padding: 0 0 0 5px;
+		}
+		
+		
+		.text-part h2{
+			font-size:45px;
+			margin-bottom: 5px;
+			}
+		
+		.text-part p{
+			font-size: 25px;
+		}
+		#texting3{
+			font-size: 23.5px;
+		}
+		#text1{
+			font-size: 17px;
+		}
+
+		td{
+			padding: 5px;
+			font-size: 15px;
+			
+		}
+		th{
+			color: white;
+			font-size: 20px;
+		}
+		#text2{
+			font-size: 17px;
+		}
+		#text3{
+			font-size:50px ;
+		}
+		#text4{
+			font-size: 20px;
+		}
+		
+	}
+	@media screen and (max-width:375px){
+	    #imaging1{
+			width: 50px;
+			height: 50px;
+		
+		}
+		#texting{
+			font-size: 25px;
+			padding-top: 15px;
+		} 
+		.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+		
+		}
+		.naving{
+			display: flex;
+			flex-direction: column;
+			height: 0;
+			overflow: hidden;
+		}
+		.naving.open{
+			height: auto;
+		}
+		.rectangle{
+			height: 250px;
+		}
+
+		.text-part h2{
+			font-size:30px;
+			}
+		
+		.text-part p{
+			font-size: 15px;
+		}
+		#texting3{
+			font-size: 15px;
+		}
+		#text1{
+			font-size: 11.5px;
+		}
+		td{
+			padding: 2px;
+			font-size: 10px;
+			
+		}
+		th{
+			color: white;
+			font-size: 15px;
+		}
+		#text2{
+			font-size: 13px;
+		}
+		#text3{
+			font-size:30px ;
+		}
+		#text4{
+			font-size: 15px;
+		}
+	}
+    </style>
+</head>s
+<body>
+	<div id="logoing"><img src="images/logo.jpg" alt="jenny global plate" id="imaging1"> <span id="texting"> JENNY GLOBAL PLATE</span></div>
+	<nav>
+		<div class="hamburger"></div>
+		<ul class="naving">
+		<li><a href="index.html" class="active">Home</a></li>
+		<li><a href="menupage.html">Menu</a></li>
+		<li><a href="contactpage.html">Contact</a></li>
+		<li><a href="reservationpage.html">Events & Reservation</a></li>
+	</ul>
+	
+	</nav>
+
+	<div class="container">
+		<div class="rectangle">
+			<div class="image-part"><img src="images/pizza.jpg" alt="pizza">
+			</div>
+			<div class="text-part">
+				<h2>ABOUT US</h2>
+				<p>Located in the hearts of Abuja City, our restaurant offers a culinary journey around the world. with a rich history spanning over 10 years and counting. we have perfected the art of blending flavours and cultures to create a unique dining experience.</p>
+			</div>
+		</div>
+
+			
+		<div class="container">
+		<div class="rectangle" style="flex-direction: row-reverse;">
+			<div class="image-part"><img src="images/bottle.jpeg" alt="nature">
+			</div>
+			<div class="text-part">
+				<h2>FOOD AND DRINKS</h2>
+				<p> Savouring all the flavours at Jenny Global Plate, we take pride in serving delicious meals and drinks inspired by global cuisines. from sweet treats to savory delights, our menu offers a range of mouth-watering options to satisfy any craving. </p>
+			</div>
+		</div>
+		<div class="container">
+		<div class="rectangle">
+			<div class="image-part"><img src="images/finedining.jpg" alt="nature">
+			</div>
+			<div class="text-part">
+				<h2 style="margin-top: 0px;">DECOR & AMBIENCE</h2>
+				<p style="margin-top: 0px;" id="texting3">A warm and inviting space. step into our cozy restaurant, where warm lightinng and elegant decor create the perfect ambiance for a memorable dining experience. whether you are celebrating a special occasion or you want to unwind, our inviting atmosphere will make you feel right at home </p>
+			</div>
+		</div>
+		<div class="container">
+		<div class="rectangle" style="flex-direction: row-reverse;">
+			<div class="image-part"><img src="images/wine1.jpg" alt="nature">
+			</div>
+			<div class="text-part">
+				<h2 style="margin-top: 0px;">GROUPS AND EVENT</h2>
+				<p style="margin-top: 0px;">Host your special occasions with us! our restaurants accomodates reservations for birthday parties, weddings and corporate events. contact us to book your accomodation today and enjoy a fine and cozy environment for your event. </p>
+			</div>
+		</div>
+		<div class="container">
+		<div class="rectangle">
+			<div class="image-part"><img src="images/des7.jpg" alt="nature">
+			</div>
+			<div class="text-part">
+				<h2 style="margin-top: 15px; " >VISIT US</h2>
+				<p style="margin-top: 0px;" id="text1">Looking for a great dining experience? <br> Visit us at Arab Road opposite Glass church kubwa Abuja. We are Open: <br>
+				<table>
+					<tr>
+						<th>Days</th>
+						<th>Time</th>
+					</tr>
+					<tr>
+						<td>Sunday</td>
+						<td>8am-11pm</td>
+					</tr>
+					<tr>
+						<td>Monday</td>
+						<td>8am-11pm</td>
+					</tr>
+					<tr>
+						<td>Tuesday</td>
+						<td>8am-11pm</td>
+					</tr>
+					<tr>
+						<td>Wednesday</td>
+						<td>8am-11pm</td>
+					</tr>
+					<tr>
+						<td>Thursday</td>
+						<td>8am-11pm</td>
+					</tr>
+					<tr>
+						<td>friday</td>
+						<td>8am-11pm</td>
+					</tr>
+					<tr>
+						<td>Saturday</td>
+						<td>8am-11pm</td>
+					</tr>
+				</table> <br> <span id="text2" > Come and enjoy a meal with us </span> </p>
+			</div>
+		</div>
+		<div class="container">
+		<div class="rectangle" style="flex-direction: row-reverse;">
+			
+			<div class="text-part">
+				<h2 id="text3">CONTACT US</h2>
+				<p id="text4">Jenny Global Plate <br> Arab Road Opposite Glass church Kubwa Abuja <br> ifeomaumeh090@gmail.com <br> Tel: 08114464357</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+ const burger =document.querySelector('.hamburger');
+const nav=document.querySelector('.naving');
+burger.addEventListener('click', ()=>{
+	nav.classList.toggle('open');
+	});
+  
+	</script>
+		
+</body>
+</html>

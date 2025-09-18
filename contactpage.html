@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Contact</title>
+	<style>
+		.naving{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+		nav{
+			background-color: #333333;
+		}
+		.naving a.active{
+			color: #ffd700;
+		}
+		li{
+			float: left;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+		}
+		li a:hover{
+			background-color: #111111;
+		}
+		body{
+			background-color: lightgrey;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		.icon-text{
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			gap: 10px
+			}
+	
+		
+		.icon{
+			width: 25px;
+			height: 25px;
+			object-fit: cover;
+		}
+		.text{
+			color: black;
+			font-size: 25px;
+
+		}
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 100%;
+		}
+		.block{
+			width: 30%;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgb(0, 0, 0 / 0.1);
+		}
+		h3{
+			color: black;
+			font-size: 30px;
+		}
+		p1{
+			color: black;
+			font-size: 25px;
+		}
+		.contact-form{
+			max-width: 67%;
+			margin: 70px 0 20px  0;
+			padding: 20px;
+			background-color: mintcream;
+			border: 1px solid black;
+			
+		}
+		.contact-form label{
+			display: block;
+			margin-bottom: 10px;
+			color: black;
+			font-size: 25px;
+		}
+		.contact-form input, .contact-form textarea{
+			width: 100%;
+			padding: 9px;
+			margin-bottom: 20px;
+			border: 1px solid black;
+
+		}
+		.contact-form [type=submit]{
+			color: black;
+			background-color: lightblue;
+			padding: 10px 20px;
+			border-radius: 5px;
+			width: 100px;
+			cursor: pointer;
+		}
+		.contact-form [type=submit]:hover{
+			background-color: darkblue;
+			
+		}
+		.mediaicon-text{
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			gap: 10px
+			}
+	
+		
+		.mediaicon{
+			width: 30px;
+			height: 30px;
+			object-fit: cover;
+		}
+		#imaging2{
+			width: 70%;
+			 height: 300px;
+			 object-fit: cover;
+		}
+		.mediatext{
+			color: black;
+			font-size: 30px;
+		}
+		#imaging1{
+			width: 100%; 
+			height: 370px;
+			background-size: cover;
+		}
+		#text2{ 
+			color: black; 
+			font-size: 70px;
+			 font-weight: bold;
+		}
+		#writing1{
+			color: black; 
+			font-size: 25px;
+		}
+		@media screen and (max-width:768px){
+			li a{
+			padding: 10px;
+		}
+		#text2{
+			font-size: 45px;
+		}
+		.block{
+			width: 100%;
+			margin: 2px;
+			padding: 2px;
+		}
+		h3{
+			font-size: 25px;
+		}
+		p1{
+			font-size: 20px;
+		}
+		.contact-form{
+			max-width: 80%;
+		}
+		#imaging2{
+			width: 100%;
+		}
+		.mediatext{
+			font-size: 25px	;
+		}
+	}
+	@media screen and (max-width:375px){
+		.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+		}
+		.naving{
+			display: flex;
+			flex-direction: column;
+			height: 0;
+			overflow: hidden;
+		}
+		.naving.open{
+			height: auto;
+		}
+		#imaging1{
+			height: 220px;
+		}
+		#text2{
+			font-size: 35px;
+		}
+		#writing1{
+			font-size: 20px;
+		}
+		.text{
+		color: black; 
+		font-size: 17px;
+        }
+        h3{
+			font-size: 20px;
+		}
+		p1{
+			font-size: 17px;
+		}
+		.contact-form{
+			max-width: 100%;
+			padding: 10px;
+			margin: 20px 0 20px 0;
+		}
+		
+		.contact-form label{
+			margin-bottom: 5px;
+			font-size: 20px;
+		}
+		.contact-form input, .contact-form textarea{
+			width: 100%;
+			padding: 0;
+			margin-bottom: 10px;
+		}
+		.contact-form [type=submit]{
+			padding: 7px 7px;
+			border-radius: 5px;
+		}
+		#imaging2{
+			height: 200px;
+		}
+		.mediatext{
+			font-size: 20px	;
+		}
+
+	}
+
+
+		
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="hamburger"></div>
+		<ul class="naving">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="menupage.html">Menu</a></li>
+		<li><a href="contactpage.html" class="active">Contact</a></li>
+		<li><a href="reservationpage.html">Events & Reservation</a></li>
+	</ul>
+</nav>
+	<p style="background-image: url(images/background.jpg); " id="imaging1"></p>
+	<h1 id="text2"> Get In Touch!</h1>
+	<p id="writing1">We had love to hear from you! <br>Email, Call or simply fill and submit the form to message us today. </p>
+		<div class="icon-text">
+		<img src="images/call.png" alt="call image" class="icon"> 
+		<span class="text">010000000000, 020000000000</span></div>
+	</div>
+	<div class="icon-text">
+		<img src="images/email.jpg" alt="email image" class="icon"> 
+		<span class="text">E-mail to: anonymous234@gmail.com</span></div>
+	</div>
+	<div class="container">
+		<div class="block">
+			<h3>Customer Service</h3>
+			<p1> At Jenny global plate, Our customer services is available 24 hrs around the clock to address any concern or issue you might have. </p1>
+		</div>
+		<div class="block">
+			<h3>Feedback & Suggestions</h3>
+			<p1> At Jenny global plate, we value any opinion, suggestion or feedback you might have as regards our testaurant and will continue to work towards inproving the restaurant and your input is crucial in achieving this </p1>
+		</div>
+		<div class="block"> 
+			<h3> Reservations</h3>
+			<p1> At jenny global plate, We also allow reserving of our restaurants for birthdays, wedding reception, engagements parties and many more </p1></div>
+	</div>
+	<form class="contact-form" action="contact.php" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"> <br><br>
+		<label for="email"> Email:</label>
+		<input type="email" id="email" name="email"> <br><br>
+		<label for="phone number"> Phone Number:</label>
+		<input type="number" id="phone number" name="phone number"> <br><br>
+		<label for="message"> Message:</label>
+		<textarea id="message " name="message"></textarea> <br><br>
+		<input type="submit" value="SEND">
+	</form>
+
+		<a href="https:maps.app.goo.gl/VkTNsQaKB8MRVEMH6 ">View our location on Google Maps link </a>
+		<br>
+		<img src="images/map.jpg" alt="location img" id="imaging2">
+
+			<p style="color: black; font-size: 30px; font-weight: bold;">Follow Us On:</p>
+			<div class="mediaicon-text">
+		<img src="images/face.jpg" alt="facebook image" class="mediaicon"> 
+		<span class="mediatext">Facebook:@jennyglobalplate</span></div>
+	</div>
+				<div class="mediaicon-text">
+		<img src="images/x.jpg" alt="twitter image" class="mediaicon"> 
+		<span class="mediatext">Twitter:@jennyglobalplate</span></div>
+	</div>
+				<div class="mediaicon-text">
+		<img src="images/instagram.jpg" alt="instagram image" class="mediaicon"> 
+		<span class="mediatext">Instagram:@jennyglobalplate</span></div>
+	</div>
+	<script>
+ const burger =document.querySelector('.hamburger');
+const nav=document.querySelector('.naving');
+burger.addEventListener('click', ()=>{
+	nav.classList.toggle('open');
+	});
+  
+	</script>
+
+
+</body>
+</html>

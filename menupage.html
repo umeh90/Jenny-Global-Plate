@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>over lay</title>
+	<style>
+		body{
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+			font-size: 16px;
+			background-color: white;
+		}
+		nav{
+			background-color: #333333;
+		}
+		.naving a.active{
+			color: #ffd700;
+		}
+
+		.video-container{
+			position: relative;
+			width: 100%;
+			height: 500px;
+			margin: 40px auto;
+			float: left;
+		}
+		.video{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@keyframes jenny{
+			0%{
+				text-shadow: 0 0 10x mintcream;
+				color: white;
+			}
+			50%{
+				text-shadow: 0 0 2px lightblue;
+				color:wheat;
+			}
+		}
+		.text-overlay{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: white;
+			font-size: 40px;
+			font-weight: bolder;
+			text-align: center;
+			animation: jenny 1s ease infinite;
+		}
+		.menu-container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 100px;
+			max-width: 100%;
+		}
+		.menu-card{
+			width: 25%;
+			flex-basis: 250px;
+			overflow: auto;
+			background-color: mintcream;
+			border: 1px solid black;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.menu-image{
+			border-radius: 10px 10px 0 0;
+			height: 150px;
+			object-fit: cover;
+			width: 250px;
+		}
+		.menu-content{
+			padding: 20px;
+			overflow: auto;
+			white-space: normal;
+		}
+		.menu-title{
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.menu-description{
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		.menu.price{
+			font-size: 16px;
+			font-weight: bold;
+			color: black;
+		}
+		
+		.naving{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+		li{
+			float: left;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+
+		}
+		li a:hover{
+			background-color: #111111;
+		}
+		.icon-text{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 10px
+			}
+	
+		
+		.icon{
+			width: 50px;
+			height: 50px;
+			object-fit: cover;
+		}
+		#text4{
+			font-size: 40px; 
+			color: black; 
+			text-align: center; 
+		}
+		.text{
+			color: black;
+			font-size: 40px;
+
+		}
+		#text3{
+			font-size: 80px; 
+			color: black; 
+			text-align: center; 
+			font-weight: bold; 
+			margin-bottom: 10px; 
+			margin-top: 30px;
+		}
+		#text1{
+			color: black;
+			 text-decoration: underline; 
+			 font-size: 40px; 
+			 font-weight: bold; 
+			 text-align: center; 
+			 margin-top: 40px;
+
+		}
+		#imaging2{
+			background-image: url(images/chef.jpg); 
+			width: 100%; 
+			height: 250px;
+			background-size: cover;
+		}
+		@media screen and (max-width:768px){
+			#imaging1{
+				width: 70px;
+				height: 60px;
+			}
+			li a{
+			padding: 10px;
+		}
+		.video-container{
+			height: 400px;
+		}
+		.text-overlay{
+			font-size: 25px;
+		}
+		#text1{
+			font-size: 25px;
+		}
+		.menu-card{
+			width: 50%;
+			flex-basis: 320px;
+		}
+		.menu-image{
+			width: 320px;
+		}
+		#text3{
+			font-size: 50px;
+		}
+		#text4{
+			font-size: 25px;
+		}
+		.icon-text span{
+			font-size: 20px;
+		}
+
+		}
+		@media screen and (max-width:375px){
+	    #imaging1{
+			width: 50px;
+			height: 50px;
+		}
+				.hamburger{
+			display: block;
+			background:url(images/burgermenu2.png)no-repeat  center ;
+			width: 30px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: auto;
+		background-size: cover;
+		
+		}
+	    .naving{
+			display: flex;
+			flex-direction: column;
+			height: 0;
+			overflow: hidden;
+		}
+		.naving.open{
+			height: auto;
+		}
+		.video-container{
+			height: 250px;
+			margin: 30px auto;
+		}
+		.text-overlay{
+			font-size: 16px;
+		}
+		#text1{
+			font-size: 16px;
+		}
+		.menu-container{
+			margin-top: 60px;
+		}
+		.menu-card{
+			width: 50%;
+			flex-basis: 170px;
+		}
+		.menu-image{
+			height: 150px;
+			width: 170px;
+		}
+		.menu-content{
+			padding: 5px;
+		}
+		.menu-title{
+			font-size: 15px;
+			margin-bottom: 7px;
+		}
+		.menu-description{
+			font-size: 13px;
+			margin-bottom: 10px;
+		}
+		.menu.price{
+			font-size: 14px;
+		}
+		#text3{
+			font-size: 30px;
+		}
+		#text4{
+			font-size: 17px;
+		}
+		.icon-text span{
+			font-size: 15px;
+		}
+		#imaging2{
+			height: 150px;
+		}
+
+		}
+		
+		</style>
+</head>
+<body>
+	<img src="images/logo.jpg" alt="jenny global plate" width="100" height="70" id="imaging1">
+		<nav>
+			<div class="hamburger"></div>
+		<ul class="naving">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="menupage.html" class="active">Menu</a></li>
+		<li><a href="contactpage.html">Contact</a></li>
+		<li><a href="reservationpage.html">Events & Reservation</a></li>
+	</ul>
+	</nav>
+	<div class="video-container"><video class="video" autoplay muted loop> <source src="menu.mp4" type="video/mp4"></video> <div class="text-overlay"><h1>JENNY GLOBAL PLATE</h1>
+	</div>
+</div>
+<br style="clear: both;">
+<h2 id="text1">OUR DELICIOUS MENU </h2>
+	
+	<div class="menu-container">
+		
+		<div class="menu-card"> 
+			<img src="images/akara.jpg" alt="eggs" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Beancake and pap</h>
+				<p class="menu-description"> Crispy fried beancakes served with creamy cornmeal porridge</p>
+				<p class="menu-price">#1200</p>
+
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/moimoi.jfif" alt="moi moi" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Moi Moi & Fish</h>
+				<p class="menu-description"> Steamed bean pudding made with beans, onions and spices and cerved with fried fish and egg</p>
+				<p class="menu-price">#2000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/southafrica.jfif" alt="chikalaka and pap" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> South african Dish: Chikalaka & Pap</h>
+				<p class="menu-description"> Spicy cornmeal porridge with fried fish or meat</p>
+				<p class="menu-price">#3000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/abacha.jpg" alt="Abacha" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Abacha</h>
+				<p class="menu-description"> A traditional nigerian dish from dried and shredded cassava leaves served with spicy sauce, assorted meats & palm wine</p>
+				<p class="menu-price">#3500</p>
+			</div>
+		</div>
+		
+
+
+		
+	
+	<div class="menu-container">
+		
+		<div class="menu-card"> 
+			<img src="images/jollof2.jpg" alt="rice" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Nigerian Jollof Rice</h>
+				<p class="menu-description"> Spicy rice flavoured with tomatoes and spices served with fried chicken and Toma wine</p>
+				<p class="menu-price">#11,000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/suya.jpg" alt="suya" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Suya</h>
+				<p class="menu-description"> Grilled meat skewers marinated in nigerian spices served with Guiness maltina</p>
+				<p class="menu-price">#2500</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/eguisi.jpg" alt="Eguisi" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Eguisi soup and swallow</h>
+				<p class="menu-description"> Rich and flavoured melon seed soup made with assorted meats and fish and served with any choice of swallow</p>
+				<p class="menu-price">#5000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/ogbono.jpg" alt="ogbono" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title">Ogbono and Swallow</h>
+				<p class="menu-description">made with grounded ogbono seeds and assorted meats served with any choice of swallow</p>
+				<p class="menu-price">#5000</p>
+			</div>
+		</div>
+		
+
+		
+		
+	
+	<div class="menu-container">
+		
+		<div class="menu-card"> 
+			<img src="images/ghana.jpg" alt="ghana jollof" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Ghana jollof rice</h>
+				<p class="menu-description"> flavoured rice from Ghana made with tomatoes and spices served with grilled chicken</p>
+				<p class="menu-price">#6000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/kenya.jfif" alt="ugali" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Ugali</h>
+				<p class="menu-description"> Traditional east african cornmeal staple served with stew and sauce</p>
+				<p class="menu-price">#5000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/berbecue.jfif" alt="berbecue" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> American Berbecue</h>
+				<p class="menu-description"> grilled meats (chicken, beef or pork) smothered in tangy berbecue sauce</p>
+				<p class="menu-price">#6000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/china.jfif" alt="chinese rice" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Chinese fried rice</h>
+				<p class="menu-description">stir-fried rice with vegetables, meat and spices</p>
+				<p class="menu-price">#6000</p>
+			</div>
+		</div>
+		
+
+		
+		
+	
+	<div class="menu-container">
+		
+		<div class="menu-card"> 
+			<img src="images/stirfry.jfif" alt="stirfry" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Chicken Vegetable stirfry & Rice</h>
+				<p class="menu-description"> Stirfried chicken and mixed veggies served with steamed rice</p>
+				<p class="menu-price">#7000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/shawarma.jpg" alt="shawarma" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Sharwarma</h>
+				<p class="menu-description"> Juicy chicken wrapped in a warm pitta with veggies and sauce served with vanilla Ice cream</p>
+				<p class="menu-price">#7000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/pizza.jpg" alt="pizza" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Pizza</h>
+				<p class="menu-description"> Classic Italian style pizza with various toppings like veggies and meat served wit pure heaven wine</p>
+				<p class="menu-price">#8000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/burger.webp" alt="burger" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title">Burger</h>
+				<p class="menu-description">juicy chicken patty sandwished between a toasted bun with lettuce, tomatoe and cheese</p>
+				<p class="menu-price">#7000</p>
+			</div>
+		</div>
+		<div class="menu-container">
+			
+		
+		<div class="menu-card"> 
+			<img src="images/bolognese.jfif" alt="spaghetti" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Spaghetti Bolognese</h>
+				<p class="menu-description"> Classy italian pasta dish with ground beef, tomatoe sauce and permesan cheese</p>
+				<p class="menu-price">#7000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/nkwobi.jpg" alt="nkwobi" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Nkwobi</h>
+				<p class="menu-description"> Assorted cow meat tendered in a spicy palm oil sauce infused in aromatic spice</p>
+				<p class="menu-price">#10,000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/nsala.jpg" alt="nsala" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title"> Ofe Nsala and swallow</h>
+				<p class="menu-description"> flavoured light soup made  with catfish and utazi leaves and spices served with any choice of swallow</p>
+				<p class="menu-price">#8000</p>
+			</div>
+		</div>
+		<div class="menu-card"> 
+			<img src="images/foodtray.jpg" alt="Food Tray" class="menu-image">
+			<div class="menu-content">
+				<h class="menu-title">Food Tray</h>
+				<p class="menu-description">A combination of different dishes ranging from different types of rice to small chops</p>
+				<p class="menu-price">#30,000</p>
+			</div>
+		</div>
+	</div>
+	<p id="imaging2"></p>
+	
+	<p id="text3"> CONTACT TO MAKE ORDER <br> <span id="text4"> Ready to indulge? Contact us now at:</span> </p>
+	<div class="icon-text">
+		<img src="images/location.jpg" alt="location image" class="icon"> 
+		<span class="text">Jenny Global plate <br> Arab Road Opposite Glass Church Kubwa Abuja </span></div>
+	</div>
+	<div class="icon-text">
+		<img src="images/call.png" alt="call image" class="icon"> 
+		<span class="text">08114464357, 09023456719</span></div>
+	</div>
+	<div class="icon-text">
+		<img src="images/email.jpg" alt="email image" class="icon"> 
+		<span class="text">E-mail to: ifeaomaumeh090@gmail.com</span></div>
+	</div>
+	<div class="icon-text">
+		<img src="images/time.webp" alt="time image" class="icon"> 
+		<span class="text">Open Daily: 8am - 11pm</span></div>
+	</div> 
+	<script>
+ const burger =document.querySelector('.hamburger');
+const nav=document.querySelector('.naving');
+burger.addEventListener('click', ()=>{
+	nav.classList.toggle('open');
+	});
+  
+	</script>
+		
+</body>
+</html>
