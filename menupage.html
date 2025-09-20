@@ -5,6 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>over lay</title>
 	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
 		body{
 			width: 100%;
 			box-sizing: border-box;
@@ -61,8 +66,8 @@
 			max-width: 100%;
 		}
 		.menu-card{
-			width: 25%;
-			flex-basis: 250px;
+			max-width: 20%;
+			flex:0 0 20%;
 			overflow: auto;
 			background-color: mintcream;
 			border: 1px solid black;
@@ -73,7 +78,7 @@
 			border-radius: 10px 10px 0 0;
 			height: 150px;
 			object-fit: cover;
-			width: 250px;
+			width: 100%;
 		}
 		.menu-content{
 			padding: 20px;
@@ -162,7 +167,16 @@
 			height: 250px;
 			background-size: cover;
 		}
-		@media screen and (max-width:768px){
+		@media screen and (max-width:1279px) and (min-width:769px){
+
+		.menu-card{
+			max-width: 25%;
+			flex:0 0 25%;
+		}
+
+		}
+
+		@media screen and (max-width:768px) and (min-width:481px){
 			#imaging1{
 				width: 70px;
 				height: 60px;
@@ -180,12 +194,14 @@
 			font-size: 25px;
 		}
 		.menu-card{
-			width: 50%;
-			flex-basis: 320px;
+			max-width: 40%;
+			flex: 0 0 40%;
+
 		}
 		.menu-image{
-			width: 320px;
+			width: 100%;
 		}
+		
 		#text3{
 			font-size: 50px;
 		}
@@ -197,7 +213,7 @@
 		}
 
 		}
-		@media screen and (max-width:375px){
+		@media screen and (max-width:480px){
 	    #imaging1{
 			width: 50px;
 			height: 50px;
@@ -235,12 +251,12 @@
 			margin-top: 60px;
 		}
 		.menu-card{
-			width: 50%;
-			flex-basis: 170px;
+			max-width: 40%;
+			flex:0 0 40%;
 		}
 		.menu-image{
 			height: 150px;
-			width: 170px;
+			width: 100%;
 		}
 		.menu-content{
 			padding: 5px;
