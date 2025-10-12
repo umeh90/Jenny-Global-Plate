@@ -124,6 +124,162 @@
 			 text-align: center; 
 			 text-decoration: underline;
 		}
+		.cart-icon{
+			cursor: pointer;
+			width: 30px;
+			height: auto;
+			position: relative;
+			padding-top: 13px;
+			display: block;
+			margin: 0 auto;
+		}
+		.cart-icon img{
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+
+		}
+		.cart-icon span{
+			background-color: red;
+			color: white;
+			font-size: 9px;
+			border-radius: 50%;
+			padding: 2px 4px;
+			position: absolute;
+			top: 8px;
+			right: 5px;
+		}
+         .cart-slide{
+			background-color: white;
+			top: 0;
+			right: 0;
+			width: 33%;
+			height: 100%;
+			position: fixed;
+			border: 1px solid #ccc;
+			padding: 15px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			z-index: 999;
+			transform: translateX(100%);
+			display: flex;
+			flex-direction: column;
+			transition: transform 0.3s ease;
+			border-radius: 15px 0 0 15px;
+		}
+		.cart-slide.show{
+			transform: translateX(0);
+		}
+		.cart-items .cart-orders:nth-child(even){
+			background-color: #f0f0f0;
+		}
+		.cart-header{
+			display: flex;
+			flex-direction:row;
+			justify-content: space-between;
+			margin-top: 0;
+			width: 100%;
+			border-bottom: 2px solid black;
+
+		}
+		.cart-text{
+         font-size: 1.5rem;
+		 margin: 0;
+		}
+		.cart-close{
+			background: transparent;
+			border: none;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+
+		}
+		.cart-close img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.cart-items{
+			flex: 1;
+			overflow-y: auto;
+		}
+		.cart-footer{
+			width: 100%;
+		}
+		.seperate{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			border: 1px solid black;
+			padding: 5px;
+		}
+		.seperate p1{
+			font-size: 1.2rem;
+		}
+		.checkout{
+			width: 25%;
+			background-color: green;
+			border: none;
+			color: white;
+			font-size: 1.2rem;
+			padding:6px 7px;
+			cursor: pointer;
+			margin-top: 10px;
+			
+		}
+		.checks{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.cart-orders{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+			margin-bottom: 10px;
+		}
+
+		.cart-orders img{
+         width: 80px;
+         height: 70px;
+         object-fit: cover;
+         margin-right: 15px;
+         border-radius: 4px;
+		}
+		.cart-orders span{
+			font-size: 15px;
+			margin-right: 10px;
+		}
+		.cart-orders .controlqty{
+			display: flex;
+			justify-content: center;
+			border: 2px solid black;
+			margin-right: 10px;
+        }
+        .cart-orders .controlqty button {
+        	background: transparent;
+        	padding: 7px;
+        	border: 1px solid black;
+
+        }
+        .cart-orders .controlqty span {
+        	margin:auto 6px;
+        }
+		.cart-orders .deletebtn img{
+			width: 20px;
+			height: 20px;
+			object-fit: cover;
+
+		}
+       .cart-orders .deletebtn{
+       	background: transparent;
+       	border: none;
+       }
+	   @media screen and (max-width:1279px) and (min-width:769px){
+        .cart-slide{
+			width: 60%;
+		}
+	}
 		@media screen and (max-width:768px) and (min-width:481px){
 			li a{
 			padding: 10px;
@@ -156,6 +312,44 @@
 		#text5{
 			font-size: 50px;
 		}
+		.cart-icon span{
+			padding: 1px 4px;
+		    font-size: 8px;
+		}
+		.cart-icon{
+			padding-top: 10px;
+		}
+		.cart-slide{
+			width: 75%;
+		}
+		.cart-text{
+         font-size: 1.2rem;
+		}
+        .seperate p1{
+			font-size: 1.0rem;
+		}
+        .checkout{
+			font-size: 1.0rem;
+			padding:4px 5px;
+		}
+        .cart-orders img{
+         width: 60px;
+         height: 50px;
+		}
+		.cart-orders span{
+			font-size: 12px;
+		}
+		 .cart-orders .controlqty button {
+        	padding: 5px;
+        }
+        .cart-orders .controlqty span {
+        	margin: auto 4px;
+        }
+		#imaging7{
+				width: 70px;
+				height: 60px;
+			}
+
 	}
 		@media screen and (max-width:480px){
 
@@ -222,12 +416,45 @@
 		#text5{
 			font-size: 40px;
 		}
+		.cart-slide{
+			width: 90%;
+		}
+		.cart-text{
+         font-size: 1.0rem;
+		}
+        .seperate p1{
+			font-size: 0.9rem;
+		}
+        .checkout{
+			font-size: 0.9rem;
+			padding:3px 4px;
+		}
+        .cart-orders img{
+         width: 50px;
+         height: 50px;
+		}
+		.cart-orders span{
+			font-size: 10px;
+		}
+		 .cart-orders .controlqty button {
+        	padding: 4px;
+        }
+        .cart-orders .controlqty span {
+        	margin: auto 3px;
+	
+        }
 		
+        #imaging7{
+			width: 50px;
+			height: 50px;
+		}
+
 		}
 		
 	</style> 
 </head>
 <body>
+	<img src="images/logo.jpg" alt="jenny global plate" width="100" height="70" id="imaging7">
 	<nav>
 		<div class="hamburger"></div>
 		<ul class="naving">
@@ -235,6 +462,7 @@
 		<li><a href="menupage.html">Menu</a></li>
 		<li><a href="contactpage.html">Contact</a></li>
 		<li><a href="reservationpage.html" class="active">Events & Reservation</a></li>
+		<li class="cart-icon" onclick="toggleCart()"><img src="images/cart1.png" alt="cart-icon"> <span id="cart-count">0</span></li>
 	</ul>
 </nav>
 	<p id="texting2">JENNY GLOBAL PLATE</p>
@@ -294,6 +522,22 @@
 	</div>
 </div>
 <p id="text5">Experience the perfect blend of flavours and atmosphere. we look forward to serving you soon! </p>
+<div class="cart-slide">
+    	<div class="cart-header">
+    		<h4 class="cart-text"> <strong>Shopping Cart</strong></h4>
+    		<button class="cart-close" onclick="closing()"> <img src="images/closeup.png" alt="closecart"></button>
+    	</div>
+    	<div class="cart-items"></div>
+    	<div class="cart-footer">
+    		<div class="seperate">
+    		<p1><strong>Total</strong></p1>
+    		<p2><strong>#<span id="cart-total">0</span></strong></p2>
+    	</div>
+    	<div class="checks">
+    		<button class="checkout" onclick="checkoutItem()">Checkout</button>
+    	</div>
+    	</div>
+    </div>
 <script type="text/javascript">
 	const getting = document.querySelector('.hamburger');
 	const display = document.querySelector('.naving');
@@ -301,6 +545,7 @@
 		display.classList.toggle('open')
 	});
 </script>
+<script type="text/javascript" src="cartslide.js"></script>
 
 </body>
 </html>

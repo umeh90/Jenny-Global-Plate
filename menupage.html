@@ -21,8 +21,28 @@
 		nav{
 			background-color: #333333;
 		}
+		
 		.naving a.active{
 			color: #ffd700;
+		}
+		.buttoncontainer{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+		}
+		.buttonicon{
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			width: 70%;
+			height: 30px;
+
+		}
+		.buttonicon img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 
 		.video-container{
@@ -69,6 +89,9 @@
 			max-width: 20%;
 			flex:0 0 20%;
 			overflow: auto;
+			flex-direction: column;
+			display: flex;
+			justify-content: space-between;
 			background-color: mintcream;
 			border: 1px solid black;
 			border-radius: 10px;
@@ -167,11 +190,167 @@
 			height: 250px;
 			background-size: cover;
 		}
+		.cart-icon{
+			cursor: pointer;
+			width: 30px;
+			height: auto;
+			position: relative;
+			padding-top: 13px;
+			display: block;
+			margin: 0 auto;
+		}
+		.cart-icon img{
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+
+		}
+		.cart-icon span{
+			background-color: red;
+			color: white;
+			font-size: 9px;
+			border-radius: 50%;
+			padding: 2px 4px;
+			position: absolute;
+			top: 8px;
+			right: 5px;
+		}
+         .cart-slide{
+			background-color: white;
+			top: 0;
+			right: 0;
+			width: 33%;
+			height: 100%;
+			position: fixed;
+			border: 1px solid #ccc;
+			padding: 15px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			z-index: 999;
+			transform: translateX(100%);
+			display: flex;
+			flex-direction: column;
+			transition: transform 0.3s ease;
+			border-radius: 15px 0 0 15px;
+		}
+		.cart-slide.show{
+			transform: translateX(0);
+		}
+		.cart-items .cart-orders:nth-child(even){
+			background-color: #f0f0f0;
+		}
+		.cart-header{
+			display: flex;
+			flex-direction:row;
+			justify-content: space-between;
+			margin-top: 0;
+			width: 100%;
+			border-bottom: 2px solid black;
+
+		}
+		.cart-text{
+         font-size: 1.5rem;
+		}
+		.cart-close{
+			background: transparent;
+			border: none;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+
+		}
+		.cart-close img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.cart-items{
+			flex: 1;
+			overflow-y: auto;
+		}
+		.cart-footer{
+			width: 100%;
+		}
+		.seperate{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			border: 1px solid black;
+			padding: 5px;
+		}
+		.seperate p1{
+			font-size: 1.2rem;
+		}
+		.checkout{
+			width: 25%;
+			background-color: green;
+			border: none;
+			color: white;
+			font-size: 1.2rem;
+			padding:6px 7px;
+			cursor: pointer;
+			margin-top: 10px;
+			
+		}
+		.checks{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.cart-orders{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+			margin-bottom: 10px;
+		}
+
+		.cart-orders img{
+         width: 80px;
+         height: 70px;
+         object-fit: cover;
+         margin-right: 15px;
+         border-radius: 4px;
+		}
+		.cart-orders span{
+			font-size: 15px;
+			margin-right: 10px;
+		}
+		.cart-orders .controlqty{
+			display: flex;
+			justify-content: center;
+			border: 2px solid black;
+			margin-right: 10px;
+        }
+        .cart-orders .controlqty button {
+        	background: transparent;
+        	padding: 7px;
+        	border: 1px solid black;
+
+        }
+        .cart-orders .controlqty span {
+        	margin:auto 6px;
+        }
+		.cart-orders .deletebtn img{
+			width: 20px;
+			height: 20px;
+			object-fit: cover;
+
+		}
+       .cart-orders .deletebtn{
+       	background: transparent;
+       	border: none;
+       }
+		
+
+
 		@media screen and (max-width:1279px) and (min-width:769px){
 
 		.menu-card{
 			max-width: 25%;
 			flex:0 0 25%;
+		}
+		.cart-slide{
+			width: 60%;
 		}
 
 		}
@@ -198,11 +377,43 @@
 			flex: 0 0 40%;
 
 		}
+		.cart-icon span{
+			padding: 1px 4px;
+		    font-size: 8px;
+		}
+		.cart-icon{
+			padding-top: 10px;
+		}
+		.cart-slide{
+			width: 75%;
+		}
+		.cart-text{
+         font-size: 1.2rem;
+		}
+        .seperate p1{
+			font-size: 1.0rem;
+		}
+        .checkout{
+			font-size: 1.0rem;
+			padding:4px 5px;
+		}
+        .cart-orders img{
+         width: 60px;
+         height: 50px;
+		}
+		.cart-orders span{
+			font-size: 12px;
+		}
+		 .cart-orders .controlqty button {
+        	padding: 5px;
+        }
+        .cart-orders .controlqty span {
+        	margin: auto 4px;
+        }
 		.menu-image{
 			width: 100%;
 		}
-		
-		#text3{
+	    #text3{
 			font-size: 50px;
 		}
 		#text4{
@@ -284,8 +495,34 @@
 		#imaging2{
 			height: 150px;
 		}
-
+		.cart-slide{
+			width: 90%;
 		}
+		.cart-text{
+         font-size: 1.0rem;
+		}
+        .seperate p1{
+			font-size: 0.9rem;
+		}
+        .checkout{
+			font-size: 0.9rem;
+			padding:3px 4px;
+		}
+        .cart-orders img{
+         width: 50px;
+         height: 50px;
+		}
+		.cart-orders span{
+			font-size: 10px;
+		}
+		 .cart-orders .controlqty button {
+        	padding: 4px;
+        }
+        .cart-orders .controlqty span {
+        	margin: auto 3px;
+	
+        }
+	}
 		
 		</style>
 </head>
@@ -298,6 +535,7 @@
 		<li><a href="menupage.html" class="active">Menu</a></li>
 		<li><a href="contactpage.html">Contact</a></li>
 		<li><a href="reservationpage.html">Events & Reservation</a></li>
+		<li class="cart-icon" onclick="toggleCart()"><img src="images/cart1.png" alt="cart-icon"> <span id="cart-count">0</span></li>
 	</ul>
 	</nav>
 	<div class="video-container"><video class="video" autoplay muted loop> <source src="menu.mp4" type="video/mp4"></video> <div class="text-overlay"><h1>JENNY GLOBAL PLATE</h1>
@@ -314,7 +552,9 @@
 				<h class="menu-title"> Beancake and pap</h>
 				<p class="menu-description"> Crispy fried beancakes served with creamy cornmeal porridge</p>
 				<p class="menu-price">#1200</p>
-
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/akara.JPG', 'Beancake & Pap', 1200)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -323,6 +563,9 @@
 				<h class="menu-title"> Moi Moi & Fish</h>
 				<p class="menu-description"> Steamed bean pudding made with beans, onions and spices and cerved with fried fish and egg</p>
 				<p class="menu-price">#2000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/moimoi.jfif', 'Moi Moi & Fish', 2000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -331,6 +574,9 @@
 				<h class="menu-title"> South african Dish: Chikalaka & Pap</h>
 				<p class="menu-description"> Spicy cornmeal porridge with fried fish or meat</p>
 				<p class="menu-price">#3000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/southafrica.jfif', 'Chikalaka & Pap', 3000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -339,6 +585,9 @@
 				<h class="menu-title"> Abacha</h>
 				<p class="menu-description"> A traditional nigerian dish from dried and shredded cassava leaves served with spicy sauce, assorted meats & palm wine</p>
 				<p class="menu-price">#3500</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/abacha.jpg', 'Abacha', 3500)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		
@@ -354,6 +603,9 @@
 				<h class="menu-title"> Nigerian Jollof Rice</h>
 				<p class="menu-description"> Spicy rice flavoured with tomatoes and spices served with fried chicken and Toma wine</p>
 				<p class="menu-price">#11,000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/jollof2.jpg', 'Nigerian Jollof Rice', 11000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -362,6 +614,9 @@
 				<h class="menu-title"> Suya</h>
 				<p class="menu-description"> Grilled meat skewers marinated in nigerian spices served with Guiness maltina</p>
 				<p class="menu-price">#2500</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/suya.jpg', 'Suya', 2500)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -370,6 +625,9 @@
 				<h class="menu-title"> Eguisi soup and swallow</h>
 				<p class="menu-description"> Rich and flavoured melon seed soup made with assorted meats and fish and served with any choice of swallow</p>
 				<p class="menu-price">#5000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/eguisi.jpg', 'Eguisi soup and Swallow', 5000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -378,6 +636,9 @@
 				<h class="menu-title">Ogbono and Swallow</h>
 				<p class="menu-description">made with grounded ogbono seeds and assorted meats served with any choice of swallow</p>
 				<p class="menu-price">#5000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/ogbono.jpg', 'Ogbono and Swallow', 5000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		
@@ -393,6 +654,9 @@
 				<h class="menu-title"> Ghana jollof rice</h>
 				<p class="menu-description"> flavoured rice from Ghana made with tomatoes and spices served with grilled chicken</p>
 				<p class="menu-price">#6000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/ghana.jpg', 'Ghana Jollof Rice', 6000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -401,6 +665,9 @@
 				<h class="menu-title"> Ugali</h>
 				<p class="menu-description"> Traditional east african cornmeal staple served with stew and sauce</p>
 				<p class="menu-price">#5000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/kenya.jfif', 'Ugali', 5000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -409,6 +676,9 @@
 				<h class="menu-title"> American Berbecue</h>
 				<p class="menu-description"> grilled meats (chicken, beef or pork) smothered in tangy berbecue sauce</p>
 				<p class="menu-price">#6000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/berbecue.jfif', 'American Berbecue', 6000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -417,6 +687,9 @@
 				<h class="menu-title"> Chinese fried rice</h>
 				<p class="menu-description">stir-fried rice with vegetables, meat and spices</p>
 				<p class="menu-price">#6000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/china.jfif', 'Chinese fried Rice', 6000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		
@@ -432,6 +705,9 @@
 				<h class="menu-title"> Chicken Vegetable stirfry & Rice</h>
 				<p class="menu-description"> Stirfried chicken and mixed veggies served with steamed rice</p>
 				<p class="menu-price">#7000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/stirfry.jfif', 'Chicken Vegetable stirfry and Rice', 7000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -440,6 +716,9 @@
 				<h class="menu-title"> Sharwarma</h>
 				<p class="menu-description"> Juicy chicken wrapped in a warm pitta with veggies and sauce served with vanilla Ice cream</p>
 				<p class="menu-price">#7000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/shawarma.jpg', 'Sharwarma', 7000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -448,6 +727,9 @@
 				<h class="menu-title"> Pizza</h>
 				<p class="menu-description"> Classic Italian style pizza with various toppings like veggies and meat served wit pure heaven wine</p>
 				<p class="menu-price">#8000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/pizza.jpg', 'Pizza', 8000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -456,6 +738,9 @@
 				<h class="menu-title">Burger</h>
 				<p class="menu-description">juicy chicken patty sandwished between a toasted bun with lettuce, tomatoe and cheese</p>
 				<p class="menu-price">#7000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/burger.webp', 'Burger', 7000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-container">
@@ -467,6 +752,9 @@
 				<h class="menu-title"> Spaghetti Bolognese</h>
 				<p class="menu-description"> Classy italian pasta dish with ground beef, tomatoe sauce and permesan cheese</p>
 				<p class="menu-price">#7000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/bolognese.jfif', 'Spaghetti Bolognese', 7000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -475,6 +763,9 @@
 				<h class="menu-title"> Nkwobi</h>
 				<p class="menu-description"> Assorted cow meat tendered in a spicy palm oil sauce infused in aromatic spice</p>
 				<p class="menu-price">#10,000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/nkwobi.jpg', 'Nkwobi', 10000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -483,6 +774,9 @@
 				<h class="menu-title"> Ofe Nsala and swallow</h>
 				<p class="menu-description"> flavoured light soup made  with catfish and utazi leaves and spices served with any choice of swallow</p>
 				<p class="menu-price">#8000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/nsala.jpg', 'Ofe nsala and Swallow', 8000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 		<div class="menu-card"> 
@@ -491,6 +785,9 @@
 				<h class="menu-title">Food Tray</h>
 				<p class="menu-description">A combination of different dishes ranging from different types of rice to small chops</p>
 				<p class="menu-price">#30,000</p>
+				<div class="buttoncontainer">
+                 <button class="buttonicon" onclick="addToCart('images/foodtray.jpg', 'Food Tray', 30000)"><img src="images/atc.png" alt="Add to cart icon"></button>
+             </div>
 			</div>
 		</div>
 	</div>
@@ -513,6 +810,23 @@
 		<img src="images/time.webp" alt="time image" class="icon"> 
 		<span class="text">Open Daily: 8am - 11pm</span></div>
 	</div> 
+
+    <div class="cart-slide">
+    	<div class="cart-header">
+    		<h4 class="cart-text"> <strong>Shopping Cart</strong></h4>
+    		<button class="cart-close" onclick="closing()"> <img src="images/closeup.png" alt="closecart"></button>
+    	</div>
+    	<div class="cart-items"></div>
+    	<div class="cart-footer">
+    		<div class="seperate">
+    		<p1><strong>Total</strong></p1>
+    		<p2><strong>#<span id="cart-total">0</span></strong></p2>
+    	</div>
+    	<div class="checks">
+    		<button class="checkout" onclick="checkoutItem()">Checkout</button>
+    	</div>
+    	</div>
+    </div>
 	<script>
  const burger =document.querySelector('.hamburger');
 const nav=document.querySelector('.naving');
@@ -521,6 +835,7 @@ burger.addEventListener('click', ()=>{
 	});
   
 	</script>
+	<script type="text/javascript" src="cartslide.js"></script>
 		
 </body>
 </html>
